@@ -20,6 +20,10 @@ module.exports = {
       categoryId: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        references: {
+          model: 'CategoryQuestions',
+        },
+        onDelete: 'cascade',
       },
       createdAt: {
         allowNull: false,
