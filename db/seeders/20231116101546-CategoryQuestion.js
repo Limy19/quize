@@ -8,7 +8,7 @@ module.exports = {
       [
         {
           title: 'Apple',
-          image: './images/a.jpg',
+          url: './image/a.jpg',
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -16,13 +16,13 @@ module.exports = {
 
         {
           title: 'Совы',
-          image: './images/o.jpg',
+          url: './image/o.jpg',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           title: 'Рандом',
-          image: './images/r.jpg',
+          url: './image/r.jpg',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
