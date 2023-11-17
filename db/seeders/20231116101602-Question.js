@@ -41,7 +41,7 @@ module.exports = {
         },
         {
           question: 'Как звали сову, которую подарил Хагрид Гарри Поттеру?',
-          answer: 'буклей',
+          answer: 'букля',
           categoryId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
