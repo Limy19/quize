@@ -11,7 +11,7 @@ module.exports = function Layout({ title, children }) {
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
           crossOrigin="anonymous"
         />
-        <script defer src="/js/script.js" />
+        <script defer src="/scripts/answerScript.js" />
       </head>
       <body>{children}</body>
     </html>
