@@ -1,20 +1,21 @@
-const ans = document.querySelector('.answer');
+const ans = document.querySelector('.answerForm');
 // console.log(ans);
 
 if (ans) {
   ans.addEventListener('submit', async (event) => {
     event.preventDefault();
     const { answer } = event.target;
-    const res = await fetch('/:index/category/:idCategory', {
+    const res = await fetch('/questions/category', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        id: event.target.dataset.id,
         answer: answer.value,
       }),
     });
     const data = await res.json();
-    console.log(data);
+    document.querySelector('.otvet').innerHTML = data.message;
   });
 }
