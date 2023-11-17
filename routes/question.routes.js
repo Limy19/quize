@@ -1,8 +1,7 @@
 const router = require('express').Router();
 
-const { log } = require('console');
 const QuestionCard = require('../components/Question');
-const { Question } = require('../db/models');
+const { Question, User } = require('../db/models');
 
 router.get('/:index/category/:idCategory', async (req, res) => {
   try {
@@ -25,9 +24,23 @@ router.get('/:index/category/:idCategory', async (req, res) => {
     res.status(500).end();
   }
 });
-router.post('/:index/category/:idCategory', (req, res) => {
-  const { answer } = req.body;
-  if (answer) {
+
+router.post('/category', async (req, res) => {
+  const { id, answer } = req.body;
+  if (res.app.locals.user) {
+    const user = await User.findOne({ where: { id: res.app.locals.user.id } });
+    const a = await Question.findOne({ where: { id } });
+    if (answer.toLowerCase().trim() === a.answer.toLowerCase()) {
+      user.score += 100;
+      await user.save();
+      res.app.locals.user.score = user.score;
+      res.json({ message: 'Верно!' });
+    } else {
+      user.score -= 100;
+      await user.save();
+      res.app.locals.user.score = user.score;
+      res.json({ message: 'Пупупу!' });
+    }
   }
 });
 
