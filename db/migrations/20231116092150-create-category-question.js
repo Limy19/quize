@@ -13,7 +13,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT,
       },
-      image: {
+      url: {
         type: Sequelize.TEXT,
       },
       createdAt: {
