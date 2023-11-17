@@ -7,10 +7,15 @@ function Category({ category }) {
     <div>
       {/* <img scr={category.image} /> */}
       <div>
+
         <img src="category.image" />
-        <a href={`/questions/0/category/${category.id}`}>{category.title}</a>
+        <a className='a href={`/questions/0/category/${category.id}`}>{category.title}</a>
+
+
+
       </div>
     </div>
+    
   );
 }
 module.exports = Category;
