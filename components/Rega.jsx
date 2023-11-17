@@ -8,7 +8,7 @@ function getRega({ title }) {
       <div>
         <form action="/" className="regaForm" method="POST">
           <input name="name" placeholder="name" />
-          <button type="submit">Зарегистрироваться</button>
+          <button  type="submit">Зарегистрироваться</button>
         </form>
       </div>
     </Layout>

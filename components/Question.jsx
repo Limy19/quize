@@ -10,9 +10,9 @@ function Question({ question, index, title }) {
         <div>{question.question}</div>
         <form className="answer">
           <input name="answer" placeholder="Ваш ответ" />
-          <button type="submit">ответить</button>
+          <button className='' type="submit">ответить</button>
         </form>
-        <a href={`/questions/${index}/category/${question.categoryId}`}>
+        <a className='aq' href={`/questions/${index}/category/${question.categoryId}`}>
           {'->'}
         </a>
       </div>
