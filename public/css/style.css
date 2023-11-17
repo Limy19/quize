@@ -1,0 +1,60 @@
+* {
+  margin: 10px;
+  padding: 10px;
+}
+.body {
+  flex-direction: row-reverse;
+  background-color: #36c3ff;
+  display: flex;
+  color: beige;
+}
+
+.RegaInput {
+  width: 500px;
+  height: 52px;
+  border-radius: 14px;
+  padding-left: 18px;
+  box-sizing: border-box;
+}
+.RegaButton {
+  position: absolute;
+  align-items: center;
+  background-color: black;
+  color: white;
+
+  border-radius: 8px;
+  padding: 0px, 12px, 5px, 12px;
+  text-align: center;
+  padding-left: 21px;
+}
+.Title {
+  display: flex;
+  justify-content: center;
+  margin-right: 100px;
+  font-size: 20px;
+}
+.category {
+  font-size: 20px;
+  display: inline;
+}
+a {
+  text-decoration: none  !important;
+  display: inline-block;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
+}
+a:link,
+a:visited,
+a:focus {
+  border-radius: 8px;
+  background: yellow;
+}
+a:hover {
+  background: orange;
+}
+a:active {
+  background: red;
+  color: white;
+}
