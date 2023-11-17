@@ -13,7 +13,7 @@ module.exports = function Layout({ title, children }) {
         />
         <script defer src="/scripts/answerScript.js" />
       </head>
-      <body>{children}</body>
+      <body className="body">{children}</body>
     </html>
   );
 };
