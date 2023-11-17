@@ -1,4 +1,5 @@
 const React = require('react');
+
 module.exports = function Layout({ title, children }) {
   return (
     <html lang="en">
