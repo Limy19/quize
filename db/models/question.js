@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         references: {
           model: 'CategoryQuestions',
+          key: 'id',
         },
         onDelete: 'cascade',
       },
