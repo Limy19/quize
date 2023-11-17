@@ -91,3 +91,28 @@ position: absolute;
     justify-content: space-around;
     background-color:#b2dfdb ;
 }
+.ccccc{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+  }
+  .categ{
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+  }
+  .NameScore{
+position: absolute;
+
+  }
+  .nameDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contNav{
+    display: flex;
+    justify-content: space-around;
+    background-color:#b2dfdb ;
+}
