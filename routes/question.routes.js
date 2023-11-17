@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+const { EOL } = require('os');
 const QuestionCard = require('../components/Question');
 const { Question, User } = require('../db/models');
 
@@ -36,10 +36,14 @@ router.post('/category', async (req, res) => {
       res.app.locals.user.score = user.score;
       res.json({ message: 'Верно!' });
     } else {
-      user.score -= 100;
+      if (user.score > 0) {
+        user.score -= 100;
+      }
       await user.save();
       res.app.locals.user.score = user.score;
-      res.json({ message: 'Пупупу!' });
+      res.json({
+        message: `Пупупу! ${EOL} Правлиьный ответ  ${a.answer}`,
+      });
     }
   }
 });

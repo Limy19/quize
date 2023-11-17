@@ -6,13 +6,13 @@ const { EOL } = require('os');
 function CategoryList({ title, categories, user }) {
   return (
     <Layout title={title}>
-
-      <div className='NameScore'>{`Hello,${user.name}!  Let's go! Score:${user.score}`}</div>
-
-      <div>
+      <div className='nameDiv'>
+        <div className='NameScore'><p>{`Hello,${user.name}!  Let's go! Score:${user.score}`}</p></div>
+      <div className='categ'>
         {categories.map((category) => (
           <Category key={category.id} category={category} />
         ))}
+      </div>
       </div>
     </Layout>
   );
